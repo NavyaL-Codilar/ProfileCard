@@ -1,0 +1,13 @@
+$minimum-heigth:100vh;
+$mycolor:#000;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: $minimum-heigth;
+  width: 100%;
+  background-color:#e26715ea;
+}
+

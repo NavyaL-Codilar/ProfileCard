@@ -1,0 +1,162 @@
+@charset 'UTF-8';
+@import "grid";
+.cards_all {
+  @include grid(3, 1); // 12 columns, 10 rows
+  .each_card {
+    font-size: 64px;
+    font-weight: bold;
+    font-style: italic;
+    height: 390px;
+    width: 300px;
+    text-align: center;
+    background-color:rgb(235, 185, 47); 
+    color: rgb(243, 82, 82);
+    border: 5px solid rgba(230, 122, 21, 0.582);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  .pictures img {
+    margin-top: 3%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: solid 5px;
+    margin-bottom: 36.5%;
+    transition: 1s ease-in-out;
+  }
+  .u_name {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10%;
+  }
+  .mail-id {
+    font-size: 24px;
+    font-weight: lighter;
+    opacity: 0;
+  }
+  // margin-left:13em auto;
+  margin-right: auto;
+  align-items: center;
+  justify-items: center;
+}
+.pages {
+  .btnl,
+  .btnr {
+    margin-top: 0 1%;
+    background: transparent;
+    border: none;
+    width: 1%;
+    cursor: pointer;
+  }
+  text-align: center;
+  overflow: hidden;
+}
+.each_card:hover{
+    .pictures img{
+        border-radius: 10px;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 0;
+    }
+    .mail-id{
+        opacity: 1;
+    }
+
+}
+//for tab
+@media screen and (min-width: 666px) and (max-width: 1024px) {
+  .cards_all {
+    @include grid(2, 1);
+    .each_card {
+      font-size: 64px;
+      font-weight: bold;
+      height: 375px;
+      width: 235px;
+      text-align: center;
+      background-color:rgb(243, 148, 24);
+      border-radius: 10px;
+    }
+    align-items: center;
+    align-items: center;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    .mail-id{
+        opacity: 1;
+    }
+    
+  }
+  .pages {
+    .btnl,
+    .btnr {
+      margin-top: 0 1%;
+      background: transparent;
+      border: none;
+      width: 1%;
+      cursor: pointer;
+    }
+    text-align: center;
+    overflow: hidden;
+  }
+  .each_card:hover{
+      .pictures img{
+          border-radius: 10px;
+          width: 200px;
+          height: 220px;
+          margin-bottom: 0;
+      }
+      .mail-id{
+          opacity: 1;
+      }
+  
+  }
+   
+  
+}
+//for mobile
+@media screen and (min-width: 300px) and (max-width: 665px) {
+  .cards_all {
+    @include grid(1, 1);
+    .each_card {
+      font-size: 64px;
+      font-weight: bold;
+      height: 375px;
+      width: 235px;
+      text-align: center;
+      background-color:rgb(247, 243, 26);
+      border-radius: 10px;
+    }
+    align-items: center;
+    justify-items: center;
+    .mail-id{
+        opacity: 1;
+    }
+  }
+  .pages {
+    .btnl,
+    .btnr {
+      margin-top: 0 1%;
+      background: transparent;
+      border: none;
+      width: 1%;
+      cursor: pointer;
+    }
+    text-align: center;
+    overflow: hidden;
+  }
+  .each_card:hover{
+      .pictures img{
+          border-radius: 5px;
+          width: 200px;
+          height: 200px;
+          margin-bottom: 0;
+      }
+      .mail-id{
+          opacity: 1;
+      }
+  
+  }
+ 
+}
